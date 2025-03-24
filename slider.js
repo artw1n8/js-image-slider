@@ -11,7 +11,8 @@ function slider({container, slide, nextArrow, prevArrow, totalCounter, currentCo
     const slidesField = document.querySelector(field);
     
     let currentCount = 1;
-    let currentPicture = pictures[0];
+    let offset = 0;
+    
     if(countPictures>9){
         totalNumber.textContent = countPictures;
         currentNumber.textContent = `${currentCount}`
@@ -19,7 +20,7 @@ function slider({container, slide, nextArrow, prevArrow, totalCounter, currentCo
         totalNumber.textContent = '0' + countPictures;
         currentNumber.textContent = `0${currentCount }`
     }
-    let offset = 0;
+    
     slidesField.style.width = 100 * pictures.length + '%';
     slidesField.style.display = 'flex';
     slidesField.style.transition = '0.5s all';
